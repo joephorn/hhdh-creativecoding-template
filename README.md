@@ -15,13 +15,13 @@ npx serve .
 
 `for` and `id` (these two are the same) to the desired parameter name (e.g. 'size')
 
-`min` to the desired minimum value
+`min` to the desired minimum value (e.g. '1')
 
-`max` to the desired maximum value
+`max` to the desired maximum value (e.g. '100')
 
-`step` to the desired minimum amount the value can change
+`step` to the desired minimum amount the value can change (e.g. '1')
 
-`value` to the desired starting value
+`value` to the desired starting value (e.g. '10')
 
 Now the value name (same name as `for` and `id`) can be used in sketch.js. For example:
 ```bash

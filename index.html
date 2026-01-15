@@ -9,13 +9,11 @@
   <body>
     <main>
       <section id="controls" aria-label="Controls">
-        <div class="controls-header">
-          <div class="controls-actions">
-            <button id="randomize" type="control">Randomize</button>
-            <button id="reset" type="button" class="control">Reset</button>
-          </div>
-        </div>
+        <!-- VOORBEELD KNOPPEN -->
+        <button id="randomize" class="control" type="button">Randomize</button>
+        <button id="reset" class="control" type="button">Reset</button>
 
+        <!-- VOORBEELD KLEUR SELECTOR -->
         <div class="control">
           <label for="bg">background</label>
           <input id="bg" type="color" value="#000000" />
@@ -25,19 +23,20 @@
           <input id="fg" type="color" value="#ffffff" />
         </div>
 
+        <!-- VOORBEELD SLIDER -->
         <div class="control">
           <label for="size">Size</label>
           <input
             id="size"
             type="range"
-            min="20"
-            max="200"
+            min="0"
+            max="1000"
             step="1"
-            value="80"
+            value="100"
           />
-          <output id="sizeOut" for="size"></output>
         </div>
 
+        <!-- VOORBEELD EXPORT -->
         <div class="control">
           <button id="exportRun" type="button">Export PNG</button>
           <button id="recordMp4" type="button">Record MP4 (5s)</button>

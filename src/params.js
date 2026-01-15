@@ -115,37 +115,6 @@
     return { ...values };
   }
 
-  function buildKeyframeCode() {
-    const params = getParameters();
-    return Object.keys(params)
-      .sort()
-      .map((key) => `${key}=${params[key]}`)
-      .join(';');
-  }
-
-  function applyKeyframeCode(code) {
-    if (!code) return false;
-    const parts = String(code)
-      .split(/[;,]\s*/)
-      .map((part) => part.trim())
-      .filter(Boolean);
-    if (!parts.length) return false;
-
-    parts.forEach((part) => {
-      const [key, raw] = part.split('=');
-      if (!key) return;
-      const k = key.trim();
-      const param = registry.get(k);
-      if (param && !param.isNumeric) {
-        setParamValue(k, raw);
-      } else {
-        setParamValue(k, Number(raw));
-      }
-    });
-
-    return true;
-  }
-
   function randomValueForParam(param) {
     const min = Number.isFinite(param.min) ? param.min : 0;
     const max = Number.isFinite(param.max) ? param.max : 1;
@@ -178,8 +147,6 @@
       resetDefaults,
       set: setParamValue,
       get: getParameters,
-      buildKeyframeCode,
-      applyKeyframeCode,
       values,
       registry,
     };

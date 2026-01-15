@@ -1,6 +1,5 @@
 function setup() {
-  const canvas = createCanvas(720, 420);
-  canvas.parent('canvasWrap');
+  createCanvas(720, 420).parent('canvasWrap');
 
   window.PARAMS.register();
 
@@ -19,7 +18,6 @@ function setup() {
   }
 
   window.EXPORTS.register();
-
 }
 
 function draw() {
@@ -30,3 +28,4 @@ function draw() {
   translate(width / 2, height / 2);
   ellipse(0, 0, size, size);
 }
+

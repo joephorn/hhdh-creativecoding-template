@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Template project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section id="controls" aria-label="Controls">
+        <div class="controls-header">
+          <div class="controls-actions">
+            <button id="randomize" type="control">Randomize</button>
+            <button id="reset" type="button" class="control">Reset</button>
+          </div>
+        </div>
+
+        <div class="control">
+          <label for="bg">background</label>
+          <input id="bg" type="color" value="#000000" />
+        </div>
+        <div class="control">
+          <label for="fg">foreground</label>
+          <input id="fg" type="color" value="#ffffff" />
+        </div>
+
+        <div class="control">
+          <label for="size">Size</label>
+          <input
+            id="size"
+            type="range"
+            min="20"
+            max="200"
+            step="1"
+            value="80"
+          />
+          <output id="sizeOut" for="size"></output>
+        </div>
+
+        <div class="control">
+          <button id="exportPng" type="button">Export PNG</button>
+        </div>
+      </section>
+
+      <div id="canvasWrap" aria-label="Canvas"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>

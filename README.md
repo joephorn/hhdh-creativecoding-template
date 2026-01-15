@@ -1,6 +1,8 @@
 # Creative Coding Template
 Template project for future creative coding projects for HeyHeydeHaas.
 
+*CODING KNOWLEDGE IS REQUIRED FOR USING THIS TOOL*
+
 ## Getting started
 
 ```bash

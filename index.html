@@ -8,12 +8,12 @@
   </head>
   <body>
     <main>
-      <section id="controls" aria-label="Controls">
-        <!-- VOORBEELD KNOPPEN -->
-        <button id="randomize" class="control" type="button">Randomize</button>
-        <button id="reset" class="control" type="button">Reset</button>
+      <section id="controls">
+        <!-- KNOPPEN -->
+        <button id="randomize" class="control">randomize</button>
+        <button id="reset" class="control">reset</button>
 
-        <!-- VOORBEELD KLEUR SELECTOR -->
+        <!-- KLEUR SELECTOR -->
         <div class="control">
           <label for="bg">background</label>
           <input id="bg" type="color" value="#000000" />
@@ -23,9 +23,9 @@
           <input id="fg" type="color" value="#ffffff" />
         </div>
 
-        <!-- VOORBEELD SLIDER -->
+        <!-- SLIDERS -->
         <div class="control">
-          <label for="size">Size</label>
+          <label for="size">size</label>
           <input
             id="size"
             type="range"
@@ -36,14 +36,14 @@
           />
         </div>
 
-        <!-- VOORBEELD EXPORT -->
+        <!-- EXPORT -->
         <div class="control">
-          <button id="exportRun" type="button">Export PNG</button>
-          <button id="recordMp4" type="button">Record MP4 (5s)</button>
+          <button id="exportRun">export PNG</button>
+          <button id="recordMp4">record MP4 (5s)</button>
         </div>
       </section>
 
-      <div id="canvasWrap" aria-label="Canvas"></div>
+      <div id="canvasWrap"></div>
     </main>
 
     <script src="./libs/p5.min.js"></script>

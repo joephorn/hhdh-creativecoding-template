@@ -1,6 +1,5 @@
 main {
   display: flex;
-  align-items: flex-start;
   gap: 16px;
   padding: 16px;
 }
@@ -11,8 +10,4 @@ main {
 
 .control {
   margin-bottom: 10px;
-}
-
-#canvasWrap {
-  flex: 1 1 auto;
 }

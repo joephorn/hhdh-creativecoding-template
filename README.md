@@ -27,7 +27,7 @@ Now the value name (same name as `for` and `id`) can be used in sketch.js. For e
 ```bash
 ellipse(0, 0, size, size);
 ```
-The value will update each frame.
+This parameter is now connected to the slider.
 
 ## Credits
 Developed by Joep Horn  

@@ -10,6 +10,7 @@ git clone https://github.com/joephorn/hhdh-creativecoding-template
 npx serve .
 ```
 
+- The canvas size (on which the visuals are displayed) can be changed in sketch.js line 2: `createCanvas([width], [height])`.
 - Add new sources (e.g. images) in /src/images to keep files organised.
 - To add a slider, copy-paste the div under *SLIDERS* and change:
 

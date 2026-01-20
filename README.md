@@ -10,6 +10,10 @@ git clone https://github.com/joephorn/hhdh-creativecoding-template
 npx serve .
 ```
 
+The project should look like this:
+<img width="1211" height="674" alt="Project template" src="https://github.com/user-attachments/assets/ee9cf1e4-72f7-4ce0-b762-68fa6976fd5d" />
+
+
 - The canvas size (on which the visuals are displayed) can be changed in sketch.js line 2: `createCanvas([width], [height])`.
 - Add new sources (e.g. images) in /src/images to keep files organised.
 - To add a slider, copy-paste the div under *SLIDERS* and change:

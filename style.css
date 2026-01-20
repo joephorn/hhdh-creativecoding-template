@@ -11,3 +11,13 @@ main {
 .control {
   margin-bottom: 10px;
 }
+
+.keyframe-nav {
+  margin-right: 4px;
+}
+
+.keyframe-nav.is-active {
+  color: #000000;
+  background: #ffffff;
+  border: 1px solid #000000;
+}

@@ -36,6 +36,18 @@
           />
         </div>
 
+        <!-- KEYFRAMES -->
+        <div class="control">
+          <button id="addKeyframe">add keyframe</button>
+          <button id="removeKeyframe">remove keyframe</button>
+        </div>
+        <div class="control" id="keyframeNav"></div>
+        <div class="control">
+          <button id="exportScene">export scene</button>
+          <button id="importScene" type="button">import scene</button>
+          <input id="importSceneInput" type="file" accept=".json,application/json" hidden />
+        </div>
+
         <!-- EXPORT -->
         <div class="control">
           <button id="exportRun">export PNG</button>
@@ -49,6 +61,7 @@
     <script src="./libs/p5.min.js"></script>
     <script src="./src/params.js"></script>
     <script src="./src/export-manager.js"></script>
+    <script src="./src/scene-manager.js"></script>
     <script src="sketch.js"></script>
   </body>
 </html>

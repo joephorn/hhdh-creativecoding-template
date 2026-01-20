@@ -1,6 +1,19 @@
 function setup() {
   createCanvas(720, 420).parent('canvasWrap');
 
+  config();
+}
+
+function draw() {
+  background(bg);
+  fill(fg);
+  noStroke();
+
+  translate(width / 2, height / 2);
+  ellipse(0, 0, size, size);
+}
+
+function config() {
   window.PARAMS.register();
 
   const resetButton = document.getElementById('reset');
@@ -18,14 +31,7 @@ function setup() {
   }
 
   window.EXPORTS.register();
+  if (window.SCENES) {
+    window.SCENES.register();
+  }
 }
-
-function draw() {
-  background(bg);
-  fill(fg);
-  noStroke();
-
-  translate(width / 2, height / 2);
-  ellipse(0, 0, size, size);
-}
-

@@ -1,4 +1,4 @@
-$${\color{red}CODING \space KNOWLEDGE \space IS \space REQUIRED \space FOR \space USING \space THIS \space TOOL}$$
+$${\color{red}CODING \space KNOWLEDGE \space IS \space REQUIRED \space TO \space USE \space THIS \space TOOL}$$
 
 # Creative Coding Template
 Template project for future creative coding projects for HeyHeydeHaas.

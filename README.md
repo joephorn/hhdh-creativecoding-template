@@ -34,6 +34,26 @@ ellipse(0, 0, size, size);
 ```
 This parameter is now connected to the slider.
 
+## Randomize & transitions
+
+- `window.PARAMS.randomize()` randomizes numeric sliders and color inputs (like `fg` and `bg`).
+- Exclude params from randomize:
+```bash
+window.PARAMS.randomize({ excludedParams: ['fg', 'bg'] });
+```
+- Set default excludes for randomize:
+```bash
+window.PARAMS.config.randomizeExcludedParams = ['fg', 'bg'];
+```
+- Exclude params from transitions:
+```bash
+window.TRANSITIONS.tweenTo(nextParams, { excludedParams: ['fg', 'bg'] });
+```
+- Set default excludes for transitions:
+```bash
+window.TRANSITIONS.config.excludedParams = ['fg', 'bg'];
+```
+
 ## Credits
 Developed by Joep Horn  
 In collaboration with HeyHeydeHaas

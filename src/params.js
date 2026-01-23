@@ -1,4 +1,7 @@
 (function () {
+  const config = {
+    randomizeExcludedParams: ['bg', 'fg'],
+  };
   const registry = new Map();
   const values = {};
 
@@ -126,9 +129,27 @@
     return min + idx * param.step;
   }
 
-  function randomize() {
+  function randomColorValue() {
+    const value = Math.floor(Math.random() * 0xffffff)
+      .toString(16)
+      .padStart(6, '0');
+    return `#${value}`;
+  }
+
+  function randomize(options = {}) {
+    const excluded = new Set(
+      Array.isArray(options.excludedParams)
+        ? options.excludedParams
+        : config.randomizeExcludedParams
+    );
     registry.forEach((param) => {
-      if (!param.isNumeric) return;
+      if (excluded.has(param.key)) return;
+      if (!param.isNumeric) {
+        if (param.el && param.el.type === 'color') {
+          setParamValue(param.key, randomColorValue());
+        }
+        return;
+      }
       const value = randomValueForParam(param);
       setParamValue(param.key, value);
     });
@@ -142,6 +163,7 @@
 
   if (typeof window !== 'undefined') {
     window.PARAMS = {
+      config,
       register: registerParams,
       randomize,
       resetDefaults,

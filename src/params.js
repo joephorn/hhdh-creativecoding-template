@@ -1,6 +1,6 @@
 (function () {
   const config = {
-    randomizeExcludedParams: ['bg', 'fg'],
+    excludedParams: ['bg', 'fg'],
   };
   const registry = new Map();
   const values = {};
@@ -140,7 +140,7 @@
     const excluded = new Set(
       Array.isArray(options.excludedParams)
         ? options.excludedParams
-        : config.randomizeExcludedParams
+        : config.excludedParams
     );
     registry.forEach((param) => {
       if (excluded.has(param.key)) return;

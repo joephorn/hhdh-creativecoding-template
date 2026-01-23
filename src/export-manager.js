@@ -2,12 +2,6 @@
   const DEFAULT_RECORD_MS = 5000;
   const DEFAULT_FPS = 30;
 
-  function exportPNG() {
-    if (typeof saveCanvas === 'function') {
-      saveCanvas('export', 'png');
-    }
-  }
-
   function getCanvasElement() {
     return (
       document.querySelector('#canvasWrap canvas') ||
@@ -69,11 +63,6 @@
   }
 
   function register(options = {}) {
-    const buttonId = options.buttonId || 'exportRun';
-    const button = document.getElementById(buttonId);
-    if (!button) return;
-    button.addEventListener('click', exportPNG);
-
     const recordId = options.recordId || 'recordMp4';
     const recordButton = document.getElementById(recordId);
     if (recordButton) {
@@ -89,8 +78,7 @@
   if (typeof window !== 'undefined') {
     window.EXPORTS = {
       register,
-      export: exportPNG,
-      recordMP4,
+      export: recordMP4,
     };
   }
 })();

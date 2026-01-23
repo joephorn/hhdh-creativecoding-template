@@ -11,7 +11,7 @@ function draw() {
   noStroke();
 
   translate(width / 2, height / 2);
-  ellipse(0, 0, size, size);
+  ellipse(0, 0, sizeX, sizeY);
 }
 
 function config() {

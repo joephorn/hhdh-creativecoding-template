@@ -21,15 +21,12 @@
 
         <!-- SLIDERS -->
         <div class="control">
-          <label for="size">size</label>
-          <input
-            id="size"
-            type="range"
-            min="0"
-            max="1000"
-            step="1"
-            value="100"
-          />
+          <label for="sizeX">sizeX</label>
+          <input id="sizeX" type="range" min="0" max="1000" step="1" value="100"/>
+        </div>
+        <div class="control">
+          <label for="sizeY">sizeY</label>
+          <input id="sizeY" type="range" min="0" max="1000" step="1" value="100"/>
         </div>
 
         <!-- KNOPPEN -->
@@ -52,7 +49,7 @@
 
         <!-- EXPORT -->
         <div class="control">
-          <button id="exportRun">export PNG</button>
+          <button id="exportPng" onclick="saveCanvas('export.png')">export PNG</button>
           <button id="recordMp4">record MP4 (5s)</button>
           <button id="exportSvg" type="button" onclick="save('export.svg')">export SVG</button>
         </div>

@@ -54,6 +54,7 @@
         <div class="control">
           <button id="exportRun">export PNG</button>
           <button id="recordMp4">record MP4 (5s)</button>
+          <button id="exportSvg" type="button" onclick="save('export.svg')">export SVG</button>
         </div>
       </section>
 
@@ -61,6 +62,7 @@
     </main>
 
     <script src="./libs/p5.min.js"></script>
+    <script src="https://unpkg.com/p5.js-svg@1.6.0"></script>
     <script src="./src/params.js"></script>
     <script src="./src/export-manager.js"></script>
     <script src="./src/scene-manager.js"></script>

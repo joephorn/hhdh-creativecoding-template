@@ -1,10 +1,11 @@
 function setup() {
-  createCanvas(720, 420).parent('canvasWrap');
+  createCanvas(720, 420, SVG).parent('canvasWrap');
 
   config();
 }
 
 function draw() {
+  clear();
   background(bg);
   fill(fg);
   noStroke();

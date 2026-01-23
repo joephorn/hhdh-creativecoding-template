@@ -124,6 +124,16 @@
     const idx = Number.isFinite(index) ? index : activeIndex;
     const frame = scene.keyframes[idx];
     if (!frame || !frame.params) return;
+    if (
+      window.TRANSITIONS &&
+      typeof window.TRANSITIONS.tweenTo === 'function' &&
+      typeof window.TRANSITIONS.isEnabled === 'function' &&
+      window.TRANSITIONS.isEnabled()
+    ) {
+      window.TRANSITIONS.tweenTo(frame.params);
+      activeIndex = idx;
+      return;
+    }
     Object.entries(frame.params).forEach(([key, value]) => {
       window.PARAMS.set(key, value);
     });

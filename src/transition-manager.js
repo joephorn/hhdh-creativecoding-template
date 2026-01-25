@@ -2,8 +2,9 @@
   const config = {
     enabled: true,
     durationMs: 1000,
-    easing: 'easeInOutQuad',
+    easing: 'linear',
     updateUI: false,
+    stepCount: 5,
     excludedParams: ['fg', 'bg'],
   };
 
@@ -14,6 +15,11 @@
     easeInOutQuad: (t) => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2),
     easeInOutCubic: (t) =>
       t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2,
+    step: (t) => {
+      const steps = Math.max(1, Math.round(config.stepCount));
+      if (t >= 1) return 1;
+      return Math.floor(t * steps) / steps;
+    },
   };
 
   const state = {

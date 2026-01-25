@@ -1,5 +1,9 @@
 body {
   margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #111111;
 }
 
 main {
@@ -39,6 +43,7 @@ main {
 }
 
 .keyframe-nav {
+  color: #7d7d7d;
   margin-right: 4px;
 }
 
@@ -46,6 +51,22 @@ main {
   color: #000000;
   background: #ffffff;
   border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.95);
 }
 
 #canvasWrap {

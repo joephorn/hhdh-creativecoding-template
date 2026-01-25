@@ -18,7 +18,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(720, 420).parent('canvasWrap');
+  createCanvas(1200, 750).parent('canvasWrap');
   imageMode(CENTER);
   rectMode(CENTER);
   frameRate(30);

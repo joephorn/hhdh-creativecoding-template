@@ -103,9 +103,9 @@
     if (!Number.isFinite(delta) || delta === 0) return;
     ensureAtLeastOne();
     if (!scene.keyframes.length) return;
-    let nextIndex = activeIndex + delta;
-    if (nextIndex < 0) nextIndex = 0;
-    if (nextIndex >= scene.keyframes.length) nextIndex = scene.keyframes.length - 1;
+    const count = scene.keyframes.length;
+    let nextIndex = (activeIndex + delta) % count;
+    if (nextIndex < 0) nextIndex += count;
     if (nextIndex === activeIndex) return;
     applyKeyframe(nextIndex);
   }
